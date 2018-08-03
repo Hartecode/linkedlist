@@ -73,9 +73,16 @@ class LinkedList {
     this.length--; //update the length to reflect the removed node
   }
 
+  //this removes node and returns the node that is removed
+  _removeAndPost(index) {
+    const removedNode = this.get(index);
+    this.remove(index);
+    return removedNode;
+  }
+
   //removes the last element from the linked list
   pop() {
-    this.remove(this.length -1);
+    this._removeAndPost(this.length -1);
   }
 
   //method adds one or more elements to the end of an linked list
@@ -85,7 +92,7 @@ class LinkedList {
 
   //method adds one or more elements to the end of an linked list
   shift() {
-    this.remove(0);
+    this._removeAndPost(0);
   }
 
   //method adds one or more elements to the beginning of an array
