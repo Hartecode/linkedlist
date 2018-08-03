@@ -72,4 +72,32 @@ class LinkedList {
 
     this.length--; //update the length to reflect the removed node
   }
+
+  //removes the last element from the linked list
+  pop() {
+    this.remove(this.length -1);
+  }
+
+  //method adds one or more elements to the end of an linked list
+  push(value) {
+    this.insert(this.length -1, value);
+  }
+
+  //method adds one or more elements to the end of an linked list
+  shift() {
+    this.remove(0);
+  }
+
+  //method adds one or more elements to the beginning of an array
+  unshift(value) {
+    this.insert(0, value);
+  }
+
 }
+
+
+
+
+
+
+
